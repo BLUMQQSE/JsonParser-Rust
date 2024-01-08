@@ -10,7 +10,7 @@ fn main() {
   value.parse(data_str);
   value["employed"].set_bool(true);
   for item in value["hobbies"].get_array().iter()  {
-    println!("{}", item);
+    println!("{}", item.as_string());
   }
   value["hobbies"][2].set_decimal(12.3);
   println!("{}", value.to_formatted_string());
